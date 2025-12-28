@@ -45,7 +45,13 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold mb-6">Featured rooms</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sampleRooms.map((r) => (
-            <RoomCard key={r.id} id={r.id} title={r.title} description={r.description} price={r.price} onBook={() => { /* open booking flow */ }} />
+            // Do not pass event handler functions from this (server) component
+            // into a Client Component. Instead, allow the client component to
+            // navigate or handle local events. Removing `onBook` avoids the
+            // Next.js runtime error about passing event handlers to Server
+            // Components. To wire a booking flow, implement a client wrapper
+            // or use links (e.g. `/booking?id=${r.id}`).
+            <RoomCard key={r.id} id={r.id} title={r.title} description={r.description} price={r.price} />
           ))}
         </div>
       </section>
