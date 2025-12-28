@@ -1,5 +1,7 @@
-﻿import React, {useState} from "react";
-import supabase from "../../frontend/utils/supabaseClient";
+﻿"use client";
+import React, {useState} from "react";
+// Client Component: handles form input and submit. 'use client' enables event handlers.
+import { supabase } from "./utils/supabaseClient";
 
 export default function Signup() {
   const [email, setEmail] = useState("");

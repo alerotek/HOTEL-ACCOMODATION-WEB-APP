@@ -1,5 +1,8 @@
-﻿import React, {useState} from "react";
+﻿"use client";
+import React, {useState} from "react";
 
+// Client Component: PaymentForm handles user input and triggers payment flows.
+// 'use client' enables event handlers and local state.
 export default function PaymentForm() {
   const [amount, setAmount] = useState("");
   const [method, setMethod] = useState("mpesa");

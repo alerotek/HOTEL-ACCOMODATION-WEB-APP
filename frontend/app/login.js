@@ -1,5 +1,9 @@
-﻿import React, {useState} from "react";
-import supabase from "../../frontend/utils/supabaseClient";
+﻿"use client";
+import React, {useState} from "react";
+// This file is an interactive Client Component (handles form state and submit).
+// Added 'use client' so React event handlers (onSubmit/onChange) work in the App Router.
+// Import the named `supabase` export from the app utils. Adjust when real client is ready.
+import { supabase } from "./utils/supabaseClient";
 
 export default function Login() {
   const [email, setEmail] = useState("");

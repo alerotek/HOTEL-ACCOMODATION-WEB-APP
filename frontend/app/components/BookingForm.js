@@ -1,5 +1,8 @@
-﻿import React, {useState} from "react";
+﻿"use client";
+import React, {useState} from "react";
 
+// Client Component: BookingForm manages internal state and submits bookings.
+// We add 'use client' so React hooks and event handlers work with the App Router.
 export default function BookingForm() {
   const [roomType, setRoomType] = useState("single");
   const [checkin, setCheckin] = useState("");
