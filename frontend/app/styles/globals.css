@@ -1,0 +1,20 @@
+﻿/* globals.css
+   Tailwind base file placeholder. Ensure Tailwind is configured in the project.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+/* Add app-wide overrides here */
+/* Global styles for Keyman Hotel scaffold */
+html,body,#__next{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#fbfbfb;color:#111}
+a{color:#0f766e}
+button{background:#0f766e;color:#fff;border:none;padding:8px 12px;border-radius:6px}
+input,select,textarea{padding:8px;border:1px solid #ddd;border-radius:6px}
+
+/* TODO: replace with Tailwind or design system */
